@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+<div class="main-container">
+  <!-- ALL THE CARDS AND DESIGNING -->
+  <div class="top-container">
+    <div class="cards">
+      <div class="back-card">
+        <div class="card-cvv">
+          <span id="cvv">000</span>
+        </div>
+      </div>
+      <div class="front-card">
+        <div class="logo">
+          <img src="./images/card-logo.svg" alt="logo" class="logo-img">
+        </div>
+        <div class="card-number">
+          <span  id="number">0000 0000 0000 0000</span>
+        </div>
+        <div class="details">
+          <div class="card-name">
+            <span id="name">JANE APPLESEED</span>
+          </div>
+          <div class="card-expiry">
+            <span id="month">00</span>
+            <span>/</span>
+            <span id="year">00</span>  
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TEXT BOX OF FORM -->
+  <div class="text-box">
+    <form action="" id="card-form">
+      <div class="c-name">
+      <label for="input-name">CARDHOLDER NAME</label>
+      <input onkeyup="dis3()" onkeypress="return /[a-z]/i.test(event.key)" type="text" id="input-name" placeholder="e.g. Jane Appleseed">
+    </div>
+    <div class="c-number">
+      <label for="input-number">CARD NUMBER</label>
+      <input maxlength="19" type="number" onkeypress="return /[0-9]/i.test(event.key)" id="input-number" onkeyup="dis2()" placeholder="e.g. 1234 5678 9123 0000">
+    </div>
+    <div class="small-details">
+      <div class="expiry">
+        <div class="label-text">
+          <label for="input-month">EXP. DATE(MM/YY)</label>
+        </div>
+    <div class="type">   
+       <input maxlength="2" type="number" onkeypress="return /[0-9]/i.test(event.key)" class="month" id="input-month" onkeyup="dis4()" placeholder="MM" min="1" max="12">
+      <input maxlength="2" type="number" onkeypress="return /[0-9]/i.test(event.key)" class="year" id="input-year" onkeyup="dis5()" placeholder="YY">
+  </div>
+      </div>
+      <div class="cvc-box">
+        <label for="input-cvc">CVC</label>
+        <input type="number" onkeyup="dis1()" maxlength="3" onkeypress="return /[0-9]/i.test(event.key)"  id="input-cvc" placeholder="e.g. 123">
+      </div>
+    </div>
+    <div class="submit-btn">
+      <button type="reset" class="submit" >Confirm</button>
+    </div>
+    </form>
+    <div class="thank-you hide">
+      <img class="check" src="./images/icon-complete.svg"></img>
+      <h1 class="greet">THANK YOU!</h1>
+      <p class="state">We've added your card details</p>
+      <button type="submit" class="complete ">Continue</button>
+    </div>
+  </div>
+  <!-- <form action="" class="card-form">
+   
+  <div class="flex-details">
+    <div class="date-box">
+    <label for="input-month">EXP. DATE(MM/YY)</label>
+    <br>
+    <input maxlength="2" class="month" id="input-month" onkeyup="dis4()" placeholder="MM" min="1" max="12">
+    <input maxlength="2" class="year" id="input-year" onkeyup="dis5()" placeholder="YY">
+  </div>
+    <div class="cvc-box">
+    <label for="input-cvc">CVC</label>
+    <input type="text" onkeyup="dis1()" id="input-cvc" placeholder="e.g. 123">
+  </div>
+</div>
+
+  </form>
+</div> -->
+</div>
+
+<!-- JS FILE -->
+<script src="./app.js"></script>p
+  
+</body>
+</html>
+<!-- 
+  0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+ -->
+   <!-- Completed state start -->
+<!-- 
+   Thank you!
+   We've added your card details
+   Continue
+    -->
